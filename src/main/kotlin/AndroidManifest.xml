@@ -1,0 +1,22 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:androidprv="http://schemas.android.com/apk/prv/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.kross.systemui"
+    android:sharedUserId="android.uid.systemui"
+    coreApp="true">
+    <application
+        tools:replace="android:appComponentFactory"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <service
+            android:name=".service.SystemUIService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.kross.systemui.permission.SELF" />
+
+        <service
+            android:name=".service.SystemUISecondaryUserService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.kross.systemui.permission.SELF" />
+    </application>
+</manifests>

@@ -1,0 +1,39 @@
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+android_library {
+    name: "KrossSystemUI-core",
+
+    srcs: [
+        "src/**/*.java",
+        "src/**/*.kt",
+        "src/**/I*.aidl",
+    ],
+
+    resource_dirs: [
+        "res-keyguard",
+        "res",
+    ],
+    manifest: "src/main/kotlin/AndroidManifest.xml"
+}
+
+
+android_app {
+    name: "KrossSystemUI",
+
+    static_libs: [
+        "KrossSystemUI-core",
+    ],
+
+    export_package_resources: true,
+
+    overrides: [
+        "SystemUI"
+    ],
+
+    platform_apis: true,
+    system_ext_specific: true,
+    certificate: "platform",
+    priviledged: true
+}
