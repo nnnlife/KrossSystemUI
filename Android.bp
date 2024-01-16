@@ -12,10 +12,9 @@ android_library {
     ],
 
     resource_dirs: [
-        "res-keyguard",
         "res",
     ],
-    manifest: "src/main/kotlin/AndroidManifest.xml"
+    manifest: "AndroidManifest.xml"
 }
 
 
@@ -35,5 +34,5 @@ android_app {
     platform_apis: true,
     system_ext_specific: true,
     certificate: "platform",
-    priviledged: true
+    privileged: true
 }
