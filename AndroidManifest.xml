@@ -8,7 +8,7 @@
     coreApp="true">
     <application
         tools:replace="android:appComponentFactory"
-        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        android:appComponentFactory="com.kross.systemui.KrossSystemUIAppComponentFactory">
         <service
             android:name=".service.SystemUIService"
             android:enabled="true"

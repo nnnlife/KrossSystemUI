@@ -39,6 +39,7 @@ android_library {
         "res",
     ],
     manifest: "AndroidManifest.xml",
+    plugins: ["dagger2-compiler"],
 }
 
 
@@ -59,4 +60,5 @@ android_app {
     system_ext_specific: true,
     certificate: "platform",
     privileged: true,
+    plugins: ["dagger2-compiler"],
 }
