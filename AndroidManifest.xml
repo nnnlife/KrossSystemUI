@@ -9,16 +9,5 @@
     <application
         tools:replace="android:appComponentFactory"
         android:appComponentFactory="com.kross.systemui.KrossSystemUIAppComponentFactory">
-        <service
-            android:name=".service.SystemUIService"
-            android:enabled="true"
-            android:exported="true"
-            android:permission="com.kross.systemui.permission.SELF" />
-
-        <service
-            android:name=".service.SystemUISecondaryUserService"
-            android:enabled="true"
-            android:exported="true"
-            android:permission="com.kross.systemui.permission.SELF" />
     </application>
 </manifest>

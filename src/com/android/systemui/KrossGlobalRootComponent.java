@@ -2,7 +2,6 @@ package com.android.systemui;
 
 import com.android.systemui.dagger.GlobalModule;
 import com.android.systemui.dagger.GlobalRootComponent;
-import com.android.systemui.wmshell.KrossWMComponent;
 
 import javax.inject.Singleton;
 
@@ -18,8 +17,6 @@ public interface KrossGlobalRootComponent extends GlobalRootComponent {
     }
 
     @Override
-    KrossWMComponent.Builder getWMComponentBuilder();
-
-    @Override
     KrossSysUIComponent.Builder getSysUIComponent();
 }
+
