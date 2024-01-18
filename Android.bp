@@ -36,6 +36,9 @@ android_app {
     overrides: [
         "SystemUI"
     ],
+	optimize: {
+		enabled: false
+	},
 
     platform_apis: true,
     system_ext_specific: true,
@@ -43,5 +46,6 @@ android_app {
     privileged: true,
     required: [
         "privapp_whitelist_com.android.systemui",
+        "allowed_privapp_com.android.carsystemui"
     ],
 }
